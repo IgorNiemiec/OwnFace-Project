@@ -1,0 +1,533 @@
+﻿body {
+    background-color: #c7c37b;
+    margin-left:0 !important;
+    margin-right: 0 !important;
+}
+
+#H-I-page
+{
+
+    position:relative;
+
+}
+
+#H-I-navigation {
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 100px;
+    background-color: #cfc623;
+    
+}
+
+
+#H-I-title 
+{
+    position: absolute;
+    left: 14%;
+    top: 20px;
+    width:205px;
+    font-size: 50px;
+    letter-spacing:4px;
+    color: black;
+}
+
+#H-I-label1
+{
+
+    position:absolute;
+    left:50%;
+    height:20px;
+    
+    font-size:13px;
+    width:200px;
+    top:10px;
+    color:black;
+    top:17px;
+
+
+}
+
+#H-I-label2 {
+    position: absolute;
+    left: 68%;
+    height: 20px;
+    font-size: 13px;
+    width: 35px;
+    top: 10px;
+    color: black;
+    top: 17px;
+}
+
+#H-I-emailButton
+{
+    position:absolute;
+    width:150px;
+    height:20px;
+    top:38px;
+    background-color:white;
+    left:50%;
+    border:1px solid black;
+    font-size:18px;
+    
+    
+
+}
+
+  
+
+
+
+
+#H-I-passwordButton {
+    position: absolute;
+    width: 150px;
+    height: 20px;
+    top: 38px;
+    background-color: white;
+    left: 68%;
+    border: 1px solid black;
+}
+
+#H-I-LoginButton {
+    position: absolute;
+    width: 100px;
+    height: 24px;
+    background-color: #fff200;
+    left:85%;
+    top: 38px;
+    color: black;
+    border: 1px solid white;
+}
+
+    #H-I-LoginButton:hover {
+        cursor: pointer;
+        background-color: #999102;
+    }
+
+
+#H-I-label3
+{
+
+    position:absolute;
+
+    left:10%;
+    top:130px;
+    
+    font-size:50px;
+    font-weight:900;
+
+
+
+}
+
+#H-I-label4
+{
+
+    position:absolute;
+
+    left:10%;
+    top:190px;
+    font-size:23px;
+
+
+}
+
+#H-I-label5
+{
+    position:absolute;
+    font-size:40px;
+    left:60%;
+    top:130px;
+    font-weight:700;
+
+}
+
+#H-I-label6
+{
+
+    position:absolute;
+    font-size:25px;
+    left:60%;
+    top:175px;
+
+
+}
+
+#H-I-SignUp
+{
+    position:absolute;
+
+    top:210px;
+    left:58%;
+    width:500px;
+    height:500px;
+    
+
+}
+
+#H-I-FirstNameButton
+{
+    position:absolute;
+    height:30px;
+    left:5%;
+    top:20px;
+    font-size:20px;
+    width:200px;
+
+    border-radius:3px;
+    border-style:none;
+    border:3px solid gray;
+
+}
+
+#H-I-SurnameButton {
+    position: absolute;
+    height: 30px;
+    left: 50%;
+    top: 20px;
+    font-size: 20px;
+    width: 200px;
+    border-radius: 3px;
+    border-style: none;
+    border: 3px solid gray;
+}
+
+#H-I-emailButton2 {
+    position: absolute;
+    height: 30px;
+    left: 5%;
+    top: 80px;
+    font-size: 20px;
+    width: 428px;
+    border-radius: 3px;
+    border-style: none;
+    border: 3px solid gray;
+}
+
+#H-I-passwordButton2 {
+    position: absolute;
+    height: 30px;
+    left: 5%;
+    top: 140px;
+    font-size: 20px;
+    width: 428px;
+    border-radius: 3px;
+    border-style: none;
+    border: 3px solid gray;
+}
+
+
+
+#H-I-label7 {
+    position: absolute;
+    left: 5%;
+    font-size: 20px;
+    top: 200px;
+    color: #9c9797;
+    font-weight:700;
+}
+
+#H-I-Date
+{
+    position:absolute;
+    left:5%;
+    top:230px;
+    width:80px;
+    height:30px;
+
+
+
+}
+
+#H-I-Month {
+    position: absolute;
+    left: 23%;
+    top: 230px;
+    width: 80px;
+    height: 30px;
+}
+
+#H-I-Year {
+    position: absolute;
+    left: 41%;
+    top: 230px;
+    width: 80px;
+    height: 30px;
+}
+
+#H-I-label8
+{
+
+    position:absolute;
+    left:23px;
+    top: 270px;
+    font-size:20px;
+    font-weight:700;
+
+
+
+}
+
+#MySelecet
+{
+
+    width:100px;
+    height:100px;
+
+
+}
+
+#H-I-MAN
+{
+
+    position:absolute;
+
+    left:5%;
+    top:310px;
+    font-size:20px;
+
+
+}
+
+#H-I-WOMAN {
+    position: absolute;
+    left: 35%;
+    top: 310px;
+    font-size: 20px;
+}
+
+#H-I-SignUpButton {
+    position: absolute;
+    left: 5%;
+    width: 260px;
+    height: 50px;
+    top: 360px;
+    background-color: #fff100;
+    border: 4px solid white;
+    border-radius:4px;
+    font-size:25px;
+}
+
+#H-I-SignUpButton:hover
+{
+    cursor:pointer;
+    background-color: #9e9500;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 1500px)
+{
+
+ #H-I-SignUp
+ {
+     left:66%;
+     top:240px;
+ }
+
+  #H-I-label6
+  {
+      left:67%;
+
+  }
+
+  #H-I-label5{
+      left:67%;
+  }
+
+
+}
+
+@media screen and (max-width: 1100px)
+{
+
+    #H-I-title
+    {
+        left:3%;
+    }
+
+
+    #H-I-label1
+    {
+        left:40%;
+    }
+
+    #H-I-label2
+    {
+        left:65%;
+    }
+
+    #H-I-emailButton
+    {
+        left:40%;
+    }
+
+    #H-I-passwordButton
+    {
+        left:65%;
+    }
+
+
+}
+
+@media screen and (max-width: 850px)
+{
+    #H-I-label1 {
+        left: 35%;
+    }
+
+    #H-I-label2 {
+        left: 60%;
+    }
+
+    #H-I-emailButton {
+        left: 35%;
+    }
+
+    #H-I-passwordButton {
+        left: 60%;
+    }
+
+    #H-I-label3
+    {
+        left:25%;
+    }
+    
+    #H-I-label4
+    {
+        left:25%;
+    }
+
+    #H-I-label5
+    {
+        left:25%;
+        top:470px;
+    }
+
+    #H-I-label6
+    {
+        left:25%;
+        top:520px;
+    }
+
+
+
+    #H-I-SignUp {
+        left: 20%;
+        top: 650px;
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 690px)
+{
+
+    #H-I-navigation
+    {
+        height:250px;
+    }
+
+
+    #H-I-title
+    {
+        left:40%;
+    }
+
+    #H-I-label1
+    {
+        top:130px;
+        left:15%;
+    }
+
+
+    #H-I-label2 {
+        top: 130px;
+        left: 60%;
+    }
+
+    #H-I-emailButton {
+        top: 160px;
+        left: 15%;
+    }
+
+     #H-I-passwordButton {
+        top: 160px;
+        left: 60%;
+    }
+
+    #H-I-LoginButton
+    {
+        left:41%;
+        top:210px;
+    }
+
+
+    #H-I-label3 {
+        top: 300px;
+        left: 20%;
+    }
+
+    #H-I-label4 {
+        top: 370px;
+        left: 20%;
+    }
+
+
+    #H-I-label5 {
+        top: 700px;
+        
+    }
+
+    #H-I-label6
+    {
+        top:750px;
+    }
+
+    #H-I-SignUp
+    {
+        top:800px;
+        left:14%;
+    }
+
+
+
+}
+
+@media screen and (max-width:525px)
+{
+
+    #H-I-label3
+    {
+        left:10%;
+    }
+
+    #H-I-label4
+    {
+        left:15%;
+    }
+
+    #H-I-label5
+    {
+        left:15%;
+    }
+
+    #H-I-label6{
+        left:15%;
+    }
+
+    #H-I-SignUp
+    {
+        left:2%;
+    }
+    
+
+
+}

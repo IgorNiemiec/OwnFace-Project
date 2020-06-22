@@ -1,0 +1,135 @@
+﻿@page
+@model FakeFacebook.Models.Account
+@{
+}
+
+<!DOCTYPE HTML>
+<html lang="pl">
+
+
+ <head>
+     <meta name="description" content="Strona startowa WANDA" />
+     <meta name="keywords" content="WANDA" />
+     <meta charset="utf-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+     <title>WANDA</title>
+     <link rel="stylesheet" href="~/css/Home/Index.css" />
+     <script type="text/javascript" src="~/js/Index.js"></script>
+
+
+
+ </head>
+
+
+
+
+
+ <body >
+     <div id="H-I-page">
+
+         <nav>
+             <div id="H-I-navigation">
+                 <div id="H-I-title">
+                     TEST
+                 </div>
+
+                 <div id="H-I-label1">Adres e-mail lub numer telefonu</div>
+                 <div id="H-I-label2">Hasło</div>
+
+
+
+                 <form asp-controller="Home" asp-action="Login" method="get">
+
+
+                     <input name="Email" id="H-I-emailButton" type="text" />
+                     
+                    
+                     
+
+                     <input  name="Password" id="H-I-passwordButton" type="password" />
+                     
+
+
+                     <input type="submit" id="H-I-LoginButton" value="Zaloguj się">
+
+
+                 </form>
+
+
+
+             </div>
+
+         </nav>
+
+
+         <main>
+
+             <div id="H-I-label3"> Ostatnie logowanie </div>
+             <div id="H-I-label4"> Kliknij swoje zdjęcie lub dodaj konto. </div>
+             <div id="H-I-label5"> Utwórz nowe konto </div>
+             <div id="H-I-label6"> To szybkie i proste. </div>
+
+             <div id="H-I-SignUp">
+
+
+
+                 <form>
+
+
+                     <input type="text" id="H-I-FirstNameButton" placeholder="Imię" />
+                     <input type="text" id="H-I-SurnameButton" placeholder="Nazwisko" />
+                     <input type="text" id="H-I-emailButton2" placeholder="Numer telefonu komórkowego lub e-mail" />
+                     <input type="password" id="H-I-passwordButton2" placeholder="Nowe Hasło" />
+                     <div id="H-I-label7"> Data Urodzenia </div>
+                     <label for="H-I-Days"> </label>
+
+
+
+                     <div id="H-I-label8"> Wybierz płeć </div>
+
+                     <div id="H-I-MAN">
+                         <input type="radio" value="Male" name="gender">
+                         <label for="Male"> Mężczyzna </label>
+                     </div>
+
+                     <div id="H-I-WOMAN">
+
+                         <input type="radio" value="Female" name="gender">
+                         <label for="Female">Kobieta</label>
+                     </div>
+
+                     <input type="submit" id="H-I-SignUpButton" value="Zarejestruj się" />
+
+                 </form>
+
+             </div>
+
+
+
+
+
+         </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+         <script type="text/javascript" src="~/js/Index.js"></script>
+
+     </div>
+ </body>
+
+
+
+
+
+
+</html>
