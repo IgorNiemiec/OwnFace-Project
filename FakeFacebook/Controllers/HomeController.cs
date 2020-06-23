@@ -41,17 +41,18 @@ namespace FakeFacebook.Controllers
 
         }
 
-        //GET Index/Login
+
+        //GET
         [HttpGet]
-       public IActionResult Login(string Email , string Password)
+       public ActionResult Login(LoginAccount login)
         {
 
-            var Model = _context.Account.FirstOrDefault(x => x.Email == Email && x.Password == Password);
+            var Model = _context.Account.FirstOrDefault(x => x.Email == login.Email && x.Password == login.Password);
 
 
             if (Model != null)
             {
-                return NotFound();
+                return NoContent();
             }
             else
             {

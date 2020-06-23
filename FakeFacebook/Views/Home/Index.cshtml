@@ -1,5 +1,5 @@
 ﻿@page
-@model FakeFacebook.Models.Account
+@model FakeFacebook.Dtos.LoginAccount
 @{
 }
 
@@ -38,15 +38,21 @@
 
 
 
-                 <form asp-controller="Home" asp-action="Login" method="get">
+                 <form asp-controller="Home" asp-action="Login" action="Home/Login" method="get">
 
 
-                     <input name="Email" id="H-I-emailButton" type="text" />
-                     
+                  
+                
+                      <div id="H-I-emailButton">
+                          @Html.EditorFor(model => model.Email)
+                      </div>
                     
-                     
+                     <div id="H-I-passwordButton">
+                         @Html.EditorFor(model => model.Password)
+                     </div>
 
-                     <input  name="Password" id="H-I-passwordButton" type="password" />
+                 
+                 
                      
 
 
@@ -95,6 +101,7 @@
                      <div id="H-I-WOMAN">
 
                          <input type="radio" value="Female" name="gender">
+                        
                          <label for="Female">Kobieta</label>
                      </div>
 
