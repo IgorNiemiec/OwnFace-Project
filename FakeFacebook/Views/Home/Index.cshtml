@@ -34,26 +34,30 @@
                  </div>
 
                  <div id="H-I-label1">Adres e-mail lub numer telefonu</div>
-                 <div id="H-I-label2">Hasło</div>
+                 <div id="H-I-label2">
+                     Hasło
+                 </div>
 
 
 
-                 <form asp-controller="Home" asp-action="Login" action="Home/Login" method="get">
+                 <form action="Home/Index"  method="post">
 
 
-                  
-                
-                      <div id="H-I-emailButton">
-                          @Html.EditorFor(model => model.Email)
-                      </div>
-                    
-                     <div id="H-I-passwordButton">
-                         @Html.EditorFor(model => model.Password)
-                     </div>
+                    <input type="email" id="H-I-emailButton" name="Email" />
+                     @Html.ValidationMessageFor(model => model.Email, "", new { @id = "H-I-labelvalid" })
 
-                 
-                 
-                     
+
+
+
+                     <input type="password" id="H-I-passwordButton" name="Password" />
+                     @Html.ValidationMessageFor(model => model.Password, "", new { @id = "H-I-labelvalidPassword"})
+
+
+
+
+
+
+
 
 
                      <input type="submit" id="H-I-LoginButton" value="Zaloguj się">

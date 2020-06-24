@@ -11,6 +11,7 @@ using FakeFacebook.Dtos;
 using FakeFacebook.Context;
 using Microsoft.VisualBasic;
 using AutoMapper;
+using Microsoft.AspNetCore.Http;
 
 namespace FakeFacebook.Controllers
 {
@@ -34,7 +35,7 @@ namespace FakeFacebook.Controllers
         }
 
 
-        //GET Index
+        
         public IActionResult Index()
         {
             return View();
@@ -42,23 +43,28 @@ namespace FakeFacebook.Controllers
         }
 
 
-        //GET
-        [HttpGet]
-       public ActionResult Login(LoginAccount login)
+        [HttpPost]
+       public ActionResult Index(LoginAccount login)
         {
 
-            var Model = _context.Account.FirstOrDefault(x => x.Email == login.Email && x.Password == login.Password);
+            var Model = _context.Account.Any(x => x.Email == login.Email && x.Password == login.Password);
 
-
-            if (Model != null)
-            {
+            
+                if (Model)
+                {
                 return NoContent();
-            }
-            else
-            {
-                return NotFound();
-            }
-           
+                }
+                else
+                {
+
+
+                ModelState.AddModelError("", "Nie podałeś maila downie!");
+                return View();
+             
+                }
+          
+        
+            
 
 
         }

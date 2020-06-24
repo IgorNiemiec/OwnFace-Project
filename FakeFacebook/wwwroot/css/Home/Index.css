@@ -315,16 +315,36 @@
     background-color: #9e9500;
 }
 
+#H-I-labelValidEmail {
+    position: absolute;
+    left: 68%;
+    height: 20px;
+    font-size: 13px;
+    width: 40px;
+    top: 30px;
+    color: black;
+    top: 17px;
+}
 
-
-
-
-
-
-@media screen and (min-width: 1500px)
+#H-I-labelvalid
 {
+    position:absolute;
+    left:50%;
+    top:70px;
+    color:red;
+}
 
- #H-I-SignUp
+#H-I-labelvalidPassword {
+    position: absolute;
+    left: 68%;
+    top: 70px;
+    color: red;
+}
+
+
+
+@media screen and (min-width: 1500px) {
+    #H-I-SignUp
  {
      left:66%;
      top:240px;
