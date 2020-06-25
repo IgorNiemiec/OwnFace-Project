@@ -12,11 +12,13 @@ using FakeFacebook.Context;
 using Microsoft.VisualBasic;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Components.Forms;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace FakeFacebook.Controllers
 {
 
-    
+   
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -35,6 +37,7 @@ namespace FakeFacebook.Controllers
         }
 
 
+       // GET: Home
         
         public IActionResult Index()
         {
@@ -42,7 +45,7 @@ namespace FakeFacebook.Controllers
 
         }
 
-
+        //POST Index
         [HttpPost]
        public ActionResult Index(LoginAccount login)
         {
@@ -52,13 +55,15 @@ namespace FakeFacebook.Controllers
             
                 if (Model)
                 {
+                
                 return NoContent();
                 }
                 else
                 {
 
-
-                ModelState.AddModelError("", "Nie podałeś maila downie!");
+                ViewBag.valid = "Podałeś nieprawdziwy Email";
+                ViewBag.validPass = "Podałeś nieprawidłowe hasło";
+           
                 return View();
              
                 }

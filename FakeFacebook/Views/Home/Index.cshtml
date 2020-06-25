@@ -40,28 +40,32 @@
 
 
 
-                 <form action="Home/Index"  method="post">
+                 <form   asp-action="Index"  method="post">
 
 
                     <input type="email" id="H-I-emailButton" name="Email" />
-                     @Html.ValidationMessageFor(model => model.Email, "", new { @id = "H-I-labelvalid" })
+                    
 
-
+                    <div id="H-I-labelvalid">
+                        @ViewBag.valid
+                    </div>
 
 
                      <input type="password" id="H-I-passwordButton" name="Password" />
-                     @Html.ValidationMessageFor(model => model.Password, "", new { @id = "H-I-labelvalidPassword"})
+                    
 
 
 
-
+                     <div id="H-I-labelvalidPassword">
+                         @ViewBag.validPass
+                     </div>
 
 
 
 
 
                      <input type="submit" id="H-I-LoginButton" value="Zaloguj się">
-
+                    
 
                  </form>
 

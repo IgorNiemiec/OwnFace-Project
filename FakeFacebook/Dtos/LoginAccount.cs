@@ -9,11 +9,14 @@ namespace FakeFacebook.Dtos
     public class LoginAccount
     {
 
-        [Required(ErrorMessage ="Musisz podać email")]
+        [Required]
+        
+        
         public string Email { get; set; }
 
 
-        [Required(ErrorMessage ="Musisz podać hasło")]
+        [Required]
+        
         public string Password { get; set; }
 
 
