@@ -4,10 +4,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FakeFacebook.Models
+namespace FakeFacebook.Dtos
 {
-    public class Account
+    public class ReadAccountDto
     {
+
 
         public int Id { get; set; }
 
@@ -21,8 +22,8 @@ namespace FakeFacebook.Models
         public int Number { get; set; }
 
         [DataType(DataType.Password)]
-    
-        
+        [Required(ErrorMessage = "You did not write password!")]
+
         public string Password { get; set; }
 
         public int Day { get; set; }
@@ -33,6 +34,7 @@ namespace FakeFacebook.Models
 
 
         public string Gender { get; set; }
+
 
 
     }

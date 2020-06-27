@@ -2,7 +2,7 @@
 
 namespace FakeFacebook.Migrations
 {
-    public partial class LoginMigration : Migration
+    public partial class SignUpMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,8 +11,7 @@ namespace FakeFacebook.Migrations
                 table: "Account",
                 nullable: true,
                 oldClrType: typeof(string),
-                oldType: "nvarchar(max)",
-                oldNullable: true);
+                oldType: "nvarchar(max)");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -21,8 +20,9 @@ namespace FakeFacebook.Migrations
                 name: "Password",
                 table: "Account",
                 type: "nvarchar(max)",
-                nullable: true,
-                oldClrType: typeof(string));
+                nullable: false,
+                oldClrType: typeof(string),
+                oldNullable: true);
         }
     }
 }

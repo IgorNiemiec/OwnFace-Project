@@ -8,6 +8,7 @@ function Start() {
     var selectList = document.createElement("select");
 
     selectList.id = "H-I-Year";
+    selectList.name = "Year"
 
     myParent.appendChild(selectList);
 
@@ -27,7 +28,9 @@ function Start() {
 
         var selectlist3 = document.createElement("select");
 
-        selectlist3.id = "H-I-Month";
+    selectlist3.id = "H-I-Month";
+    selectlist3.name = "Month"
+    
 
         parent.appendChild(selectlist3);
 
@@ -61,7 +64,8 @@ function Start() {
 
      var selectList2 = document.createElement("select");
 
-     selectList2.id = "H-I-Date";
+    selectList2.id = "H-I-Date";
+    selectList2.name = "Day"
 
      parent.appendChild(selectList2);
 

@@ -14,8 +14,8 @@ namespace FakeFacebook.Profiles
         public Profiles()
         {
 
+            CreateMap<CreateAccountDto, Account>();
             
-           
         }
          
 

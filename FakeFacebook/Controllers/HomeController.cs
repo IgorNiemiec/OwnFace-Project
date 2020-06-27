@@ -22,15 +22,17 @@ namespace FakeFacebook.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
+        private readonly IMapper _mapper;
 
         AccountContext _context;
+        
 
 
-        public HomeController(ILogger<HomeController> logger, AccountContext context)
+        public HomeController(ILogger<HomeController> logger, AccountContext context , IMapper mapper)
         {
             _logger = logger;
             _context = context;
+            _mapper = mapper;
           
 
 
@@ -41,6 +43,9 @@ namespace FakeFacebook.Controllers
         
         public IActionResult Index()
         {
+
+            
+
             return View();
 
         }
@@ -55,8 +60,8 @@ namespace FakeFacebook.Controllers
             
                 if (Model)
                 {
-                
-                return NoContent();
+
+                return View();
                 }
                 else
                 {
@@ -70,6 +75,29 @@ namespace FakeFacebook.Controllers
           
         
             
+
+
+        }
+
+        [HttpPost]
+        public ActionResult Create(CreateAccountDto create)
+        {
+
+          
+
+          var Model = _mapper.Map<Account>(create);
+
+           
+
+            _context.Account.Add(Model);
+
+
+            _context.SaveChanges();
+
+
+            return View("Index");
+
+
 
 
         }

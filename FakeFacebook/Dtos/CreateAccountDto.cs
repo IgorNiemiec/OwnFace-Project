@@ -4,12 +4,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FakeFacebook.Models
+namespace FakeFacebook.Dtos
 {
-    public class Account
+    public class CreateAccountDto
     {
 
-        public int Id { get; set; }
 
         public string Name { get; set; }
 
@@ -21,8 +20,8 @@ namespace FakeFacebook.Models
         public int Number { get; set; }
 
         [DataType(DataType.Password)]
-    
         
+
         public string Password { get; set; }
 
         public int Day { get; set; }
@@ -33,6 +32,7 @@ namespace FakeFacebook.Models
 
 
         public string Gender { get; set; }
+
 
 
     }

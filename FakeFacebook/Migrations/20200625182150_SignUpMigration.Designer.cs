@@ -3,14 +3,16 @@ using FakeFacebook.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FakeFacebook.Migrations
 {
     [DbContext(typeof(AccountContext))]
-    partial class AccountContextModelSnapshot : ModelSnapshot
+    [Migration("20200625182150_SignUpMigration")]
+    partial class SignUpMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

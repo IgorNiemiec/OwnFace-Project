@@ -1,5 +1,8 @@
 ﻿@page
-@model FakeFacebook.Dtos.LoginAccount
+
+@model FakeFacebook.Dtos.BigViewModel
+
+
 @{
 }
 
@@ -38,21 +41,29 @@
                      Hasło
                  </div>
 
+                
+                 @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                 {
+                 
 
 
-                 <form   asp-action="Index"  method="post">
-
-
-                    <input type="email" id="H-I-emailButton" name="Email" />
+                   
                     
+                    <input type="email" id="H-I-emailButton" name="Email" />
+
+
+
 
                     <div id="H-I-labelvalid">
                         @ViewBag.valid
                     </div>
 
 
-                     <input type="password" id="H-I-passwordButton" name="Password" />
-                    
+
+                    <input type="password" id="H-I-passwordButton" name="Password" />
+
+
+
 
 
 
@@ -67,8 +78,7 @@
                      <input type="submit" id="H-I-LoginButton" value="Zaloguj się">
                     
 
-                 </form>
-
+                 }
 
 
              </div>
@@ -87,19 +97,40 @@
 
 
 
-                 <form>
+
+                 @using (Html.BeginForm("Create", "Home", FormMethod.Post))
+                 {
 
 
-                     <input type="text" id="H-I-FirstNameButton" placeholder="Imię" />
-                     <input type="text" id="H-I-SurnameButton" placeholder="Nazwisko" />
-                     <input type="text" id="H-I-emailButton2" placeholder="Numer telefonu komórkowego lub e-mail" />
-                     <input type="password" id="H-I-passwordButton2" placeholder="Nowe Hasło" />
+                  
+                     <input type="text" name="Name" placeholder="Name" id="H-I-FirstNameButton" />
+
+                    
+                     <input type="text" name="Surname" placeholder="Surname" id="H-I-SurnameButton"/>
+
+
+                   
+                     <input type="email" name="Email" id="H-I-emailButton2" placeholder="E-mail" />
+
+
+                     <input type="password" name="Password" id="H-I-passwordButton2" placeholder="Hasło" />
+
+
+
                      <div id="H-I-label7"> Data Urodzenia </div>
+                    
+
+
+
+
+
                      <label for="H-I-Days"> </label>
 
 
 
                      <div id="H-I-label8"> Wybierz płeć </div>
+
+
 
                      <div id="H-I-MAN">
                          <input type="radio" value="Male" name="gender">
@@ -109,13 +140,14 @@
                      <div id="H-I-WOMAN">
 
                          <input type="radio" value="Female" name="gender">
-                        
+
                          <label for="Female">Kobieta</label>
                      </div>
 
                      <input type="submit" id="H-I-SignUpButton" value="Zarejestruj się" />
+                 }
 
-                 </form>
+
 
              </div>
 
