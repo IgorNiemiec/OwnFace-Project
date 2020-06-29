@@ -25,6 +25,7 @@ namespace FakeFacebook.Models
         
         public string Password { get; set; }
 
+
         public int Day { get; set; }
 
         public string Month { get; set; }
