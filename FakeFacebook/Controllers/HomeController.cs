@@ -14,6 +14,10 @@ using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using FakeFacebook.Data;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Security.Cryptography;
 
 namespace FakeFacebook.Controllers
 {
@@ -21,9 +25,12 @@ namespace FakeFacebook.Controllers
    
     public class HomeController : Controller
     {
+
         private readonly ILogger<HomeController> _logger;
         private readonly IMapper _mapper;
 
+        
+        
         AccountContext _context;
         
 
@@ -44,7 +51,9 @@ namespace FakeFacebook.Controllers
         public IActionResult Index()
         {
 
-            
+
+
+          
 
             return View();
 
@@ -55,8 +64,18 @@ namespace FakeFacebook.Controllers
        public ActionResult Index(LoginAccount login)
         {
 
-            var Model = _context.Account.Any(x => x.Email == login.Email && x.Password == login.Password);
 
+
+            byte[] s = System.Text.ASCIIEncoding.ASCII.GetBytes(login.Password);
+
+            string encrypted = Convert.ToBase64String(s);
+            
+
+            
+
+            var Model = _context.Account.Any(x => x.Email == login.Email && x.Password == encrypted);
+
+            
             
                 if (Model)
                 {
@@ -74,6 +93,7 @@ namespace FakeFacebook.Controllers
                 }
           
         
+         
             
 
 
@@ -83,20 +103,55 @@ namespace FakeFacebook.Controllers
         public ActionResult Create(CreateAccountDto create)
         {
 
-          
 
-          var Model = _mapper.Map<Account>(create);
+            var check = _context.Account.Any(x => x.Email == create.Email);
 
-           
+            
 
-            _context.Account.Add(Model);
+            if (check)
+            {
+
+                ViewBag.validSing = "Konto z tym E-mailem już istnieje";
 
 
-            _context.SaveChanges();
+                return View("Index");
+
+              
 
 
-            return View("Index");
+            }
+            else
+            {
 
+
+
+
+
+                var Model = _mapper.Map<Account>(create);
+
+
+                string strmsg = string.Empty;
+                byte[] encode = System.Text.ASCIIEncoding.ASCII.GetBytes(create.Password);
+                encode = Encoding.UTF8.GetBytes(create.Password);
+                strmsg = Convert.ToBase64String(encode);
+
+                Model.Password = strmsg;
+
+                _context.Account.Add(Model);
+
+
+                
+
+
+
+
+
+
+                _context.SaveChanges();
+
+
+                return View("Index");
+            }
 
 
 
