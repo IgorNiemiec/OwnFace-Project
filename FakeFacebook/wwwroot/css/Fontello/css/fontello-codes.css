@@ -1,0 +1,8 @@
+
+.icon-home:before { content: '\e800'; } /* '' */
+.icon-monitor:before { content: '\e801'; } /* '' */
+.icon-group:before { content: '\e802'; } /* '' */
+.icon-bell:before { content: '\e803'; } /* '' */
+.icon-gauge:before { content: '\f0e4'; } /* '' */
+.icon-user-plus:before { content: '\f234'; } /* '' */
+.icon-comment:before { content: '\f4ac'; } /* '' */

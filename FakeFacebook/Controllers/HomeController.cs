@@ -80,7 +80,7 @@ namespace FakeFacebook.Controllers
                 if (Model)
                 {
 
-                return View();
+                return View("Views/Main/Main.cshtml");
                 }
                 else
                 {

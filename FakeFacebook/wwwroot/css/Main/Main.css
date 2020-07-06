@@ -1,0 +1,176 @@
+﻿body {
+    background-color:black;
+    margin-left:0 !important;
+    margin-right:0 !important;
+
+}
+
+
+#M-M-Page 
+{
+    position: relative;
+}
+
+a
+{
+    text-decoration:none;
+    color:white;
+
+
+}
+
+
+#M-M-Navigation {
+    position: fixed;
+    background-color: #dbc246;
+    
+    height:80px;
+   
+  
+    top:-10px;
+    left: 0px;
+    width: 100%;
+}
+
+#M-M-HomeButton
+{
+    position:absolute;
+    width:150px;
+    height:100px;
+    
+    color:white;
+    left:1180px;
+    top:10px;
+
+
+}
+
+
+
+
+#M-M-MonitorButton 
+{
+        position: absolute;
+        width: 50px;
+        height: 60px;
+        color: white;
+        left: 600px;
+        top: 10px;
+    }
+
+#M-M-User-Plus {
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    color: white;
+    left: 1000px;
+    top: 10px;
+}
+
+
+#M-M-icon-Comment {
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    color: white;
+    left: 1090px;
+    top: 10px;
+}
+
+#M-M-Group {
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    color: white;
+    left: 700px;
+    top: 10px;
+}
+
+#M-M-Home {
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    color: white;
+    left: 500px;
+    top: 10px;
+}
+
+
+#M-M-SearchInput
+{
+    position:absolute;
+    width:200px;
+    height:20px;
+    left:100px;
+    top:30px;
+
+
+}
+
+#M-M-Friends
+{
+   
+    background-color:black;
+    width:400px;
+    height:600px;
+    right:0px;
+    top:78px;
+    position:fixed;
+
+}
+
+
+#M-M-FriendsLabel
+{
+    position:absolute;
+    left:150px;
+    top:30px;
+    font-weight:900;
+    font-size:27px;
+    color:white;
+}
+
+#Empty {
+    width: 100%;
+    height: 100px;
+    
+}
+
+.Friend {
+    width: 100%;
+    height: 100px;
+  
+    border-radius:4px;
+    border:3px solid white;
+}
+
+.Friend:first-child
+{
+    margin-top:100px;
+}
+
+.M-M-Friend-FirstName
+{
+    color:white;
+    position:absolute;
+    font-size:25px;
+    left:30px;
+    top:30px;
+
+
+}
+
+.M-M-Friend-Surname {
+    color: white;
+    position: absolute;
+    font-size: 25px;
+    left: 200px;
+    top: 30px;
+}
+
+#All
+{
+    position:relative;
+    width:100%;
+    height:100%;
+}
