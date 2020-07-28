@@ -9,6 +9,9 @@ namespace FakeFacebook.Dtos
     public class LoginAccount
     {
 
+
+
+
         [Required]
         
         

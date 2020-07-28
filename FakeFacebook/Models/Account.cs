@@ -35,6 +35,12 @@ namespace FakeFacebook.Models
 
         public string Gender { get; set; }
 
+        public bool Active { get; set; }
+
+     
+
+    
+
 
     }
 }

@@ -1,7 +1,11 @@
 ﻿@page
-@model FakeFacebook.Views.Main.MainModel
+
+@using FakeFacebook.Models;
+@model FakeFacebook.Controllers.HomeController
+  
 @{
 }
+
 
 <!DOCTYPE HTML>
 
@@ -95,40 +99,29 @@
 
              </div>
 
-             <div class="Friend">
-                 <div id="All">
-                     <label class="M-M-Friend-FirstName"> FirstName </label>
-                     <label class="M-M-Friend-Surname"> Surname </label>
-                 </div>
 
-             </div>
+           
+             @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+             {
 
-             <div class="Friend">
-                 <div id="All">
-                     <label class="M-M-Friend-FirstName"> FirstName </label>
-                     <label class="M-M-Friend-Surname"> Surname </label>
+              
+               
+                      
+                 @foreach (Account a in ViewBag.Friends)
+                 {
+                       <div class="Friend">
+                           <div id="All">
+                               <label class="M-M-Friend-FirstName"> @a.Name </label>
+                                <label class="M-M-Friend-Surname">  @a.Surname </label>
+                            </div>
+                       </div>
+                 }
 
-                 </div>
+             }
 
-             </div>
 
-             <div class="Friend">
-                 <div id="All">
-                     <label class="M-M-Friend-FirstName"> FirstName </label>
-                     <label class="M-M-Friend-Surname"> Surname </label>
 
-                 </div>
-
-             </div>
-
-             <div class="Friend">
-                 <div id="All">
-                     <label class="M-M-Friend-FirstName"> FirstName </label>
-                     <label class="M-M-Friend-Surname"> Surname </label>
-
-                 </div>
-
-             </div>
+            
 
 
 

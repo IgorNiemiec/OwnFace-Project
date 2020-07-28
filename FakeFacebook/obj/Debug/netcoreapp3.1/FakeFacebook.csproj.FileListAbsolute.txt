@@ -64,4 +64,4 @@ D:\Aplikacja dla freelancerów\FakeFacebook\FakeFacebook\bin\Debug\netcoreapp3.1
 D:\Aplikacja dla freelancerów\FakeFacebook\FakeFacebook\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\Aplikacja dla freelancerów\FakeFacebook\FakeFacebook\obj\Debug\netcoreapp3.1\FakeFacebook.csproj.CoreCompileInputs.cache
 D:\Aplikacja dla freelancerów\FakeFacebook\FakeFacebook\obj\Debug\netcoreapp3.1\FakeFacebook.MvcApplicationPartsAssemblyInfo.cache
-D:\Aplikacja dla freelancerów\FakeFacebook\FakeFacebook\obj\Debug\netcoreapp3.1\Razor\Views\Main\Main.cshtml.g.cs
+D:\Aplikacja dla freelancerów\FakeFacebook\FakeFacebook\obj\Debug\netcoreapp3.1\Razor\Views\Home\Main.cshtml.g.cs

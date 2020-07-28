@@ -29,6 +29,8 @@ namespace FakeFacebook.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IMapper _mapper;
 
+        public IList<Friends> list;
+
         
         
         AccountContext _context;
@@ -75,12 +77,55 @@ namespace FakeFacebook.Controllers
 
             var Model = _context.Account.Any(x => x.Email == login.Email && x.Password == encrypted);
 
-            
+
+          
             
                 if (Model)
                 {
 
-                return View("Views/Main/Main.cshtml");
+                var model = _context.Account.Where(x => x.Email == login.Email);
+
+                int MyId = model.Select(x => x.Id).FirstOrDefault();
+
+
+                var FriendBase = _context.Friends.Where(x => x.FirstUser == MyId).ToList();
+
+                List<Account> friends = new List<Account>();
+
+
+
+                foreach (var item in FriendBase)
+                {
+
+                    int FriendId = item.SecondUser;
+
+
+
+                    var FriendModel = _context.Account.Where(x => x.Id == FriendId);
+
+                    
+
+
+
+                    friends.Add(FriendModel.FirstOrDefault());
+                    
+                    
+
+                    ViewBag.Friends = friends;
+
+
+
+                }
+
+
+
+
+
+
+
+
+                return View("Main");
+              
                 }
                 else
                 {
