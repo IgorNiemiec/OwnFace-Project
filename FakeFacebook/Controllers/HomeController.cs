@@ -61,8 +61,9 @@ namespace FakeFacebook.Controllers
 
         }
 
-        //POST Index
+        //POST Index/Login
         [HttpPost]
+        [ValidateAntiForgeryToken]
        public ActionResult Index(LoginAccount login)
         {
 
@@ -85,12 +86,24 @@ namespace FakeFacebook.Controllers
 
                 var model = _context.Account.Where(x => x.Email == login.Email);
 
+
+                
+
+                var test = model.Select(x => x.Active).FirstOrDefault();
+
+           
+
+
                 int MyId = model.Select(x => x.Id).FirstOrDefault();
 
 
                 var FriendBase = _context.Friends.Where(x => x.FirstUser == MyId).ToList();
 
                 List<Account> friends = new List<Account>();
+
+                
+
+                
 
 
 
@@ -113,9 +126,16 @@ namespace FakeFacebook.Controllers
 
                     ViewBag.Friends = friends;
 
-
+                    
 
                 }
+
+
+
+
+
+
+             
 
 
 
@@ -144,6 +164,7 @@ namespace FakeFacebook.Controllers
 
         }
 
+        //POST : Index/Create
         [HttpPost]
         public ActionResult Create(CreateAccountDto create)
         {
@@ -202,6 +223,44 @@ namespace FakeFacebook.Controllers
 
         }
 
+       
+        //POST : Index/Main
+        [HttpPost]
+        public async Task <IActionResult> Search(string searchString)
+        {
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                var models = _context.Account.Where(x => x.Name.Contains(searchString)).ToList();
+
+
+                List<Account> list = new List<Account>();
+
+
+                foreach (var item in models)
+                {
+
+                    list.Add(item);
+
+                    ViewBag.FriendList =  list;
+
+                  
+
+                }
+            }
+            else
+            {
+
+                return NoContent();
+
+            }
+
+
+            return View("Main");
+
+
+        }
+       
 
 
 

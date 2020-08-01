@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="~/css/Fontello/css/fontello.css" type="text/css" />
     <link rel="stylesheet" href="~/css/Main/Main.css" type="text/css" />
 
+    <script src="~/js/Main.js" type="text/javascript"></script>
 
 
     <!--[if lt IE 9]>
@@ -40,117 +41,159 @@
 
 
 
- <body>
+<body>
 
-     <div id="M-M-Page">
-
-
-         <nav>
-             <div id="M-M-Navigation">
-
-                 <div id="M-M-HomeButton">
-
-                     <a href="Main.cshtml">
-
-                         <i class="demo-icon icon-bell"></i>
-                     </a>
-
-                 </div>
-                 
+    <div id="M-M-Page">
 
 
-                 <div id="M-M-MonitorButton">
-                     <i class="demo-icon icon-monitor"></i>
-                 </div>
+        <nav>
+            <div id="M-M-Navigation">
 
-                 <div id="M-M-User-Plus">
-                     <i class="demo-icon icon-user-plus"></i>
-                 </div>
-
-                 <div id="M-M-icon-Comment">
-                     <i class="demo-icon icon-comment"></i>
-                 </div>
-
-                 <div id="M-M-Group">
-                     <i class="demo-icon icon-group">  </i>
-                 </div>
-
-                 <div id="M-M-Home">
-                     <i class="demo-icon icon-home">  </i>
-                 </div>
+                <div id="M-M-HomeButton">
 
 
-                 <input id="M-M-SearchInput" type="text" name="search" />
+                    <i class="demo-icon icon-bell"></i>
+
+
+                </div>
 
 
 
+                <div id="M-M-MonitorButton">
+                    <i class="demo-icon icon-monitor"></i>
+                </div>
 
-             </div>
+                <div id="M-M-User-Plus">
+                    <i class="demo-icon icon-user-plus"></i>
+                </div>
 
-         </nav>
+                <div id="M-M-icon-Comment">
+                    <i class="demo-icon icon-comment"></i>
+                </div>
 
+                <div id="M-M-Group">
+                    <i class="demo-icon icon-group">  </i>
+                </div>
 
-
-         <div id="M-M-Friends">
-
-             <label id="M-M-FriendsLabel"> Znajomi </label>
-
-             <div id="Empty">
-
-             </div>
-
-
-           
-             @using (Html.BeginForm("Index", "Home", FormMethod.Post))
-             {
-
-              
-               
-                      
-                 @foreach (Account a in ViewBag.Friends)
-                 {
-                       <div class="Friend">
-                           <div id="All">
-                               <label class="M-M-Friend-FirstName"> @a.Name </label>
-                                <label class="M-M-Friend-Surname">  @a.Surname </label>
-                            </div>
-                       </div>
-                 }
-
-             }
+                <div id="M-M-Home">
+                    <i class="demo-icon icon-home">  </i>
+                </div>
 
 
+                <input id="M-M-SearchInput" type="text" name="search" />
+
+
+
+
+            </div>
+
+        </nav>
+
+
+
+        <div id="M-M-Friends">
+
+            <label id="M-M-FriendsLabel"> Znajomi </label>
+
+            <div id="Empty">
+
+            </div>
+
+
+
+            @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+            {
+
+
+
+
+                @foreach (Account a in ViewBag.Friends)
+                {
+                    <div class="Friend">
+                        <div id="All">
+                            <label class="M-M-Friend-FirstName"> @a.Name </label>
+                            <label class="M-M-Friend-Surname">  @a.Surname </label>
+                        </div>
+                    </div>
+                }
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+       
+
+        <div id="M-M-AddFriends">
+
+            @using (Html.BeginForm("Search", "Home", FormMethod.Post))
+            {
+                <div id="M-M-LabelSearch"> Znajdź swoich znajomych </div>
+                <input type="text" id="SearchFriends" name="searchString" />
+                <input  type="submit" id="M-M-SearchButton" value="?">
+
+            }
+        <div id="M-M-AllFriends">
+
+            
+                   @*@foreach (Account b in ViewBag.FriendList)
+                   {
+                
+                      <div class="AllFriends">
+                          <div id="LocationLabel">
+                              <label class="firstNameLabel"> @b.Name </label>
+                              <label class="SurnameLabel">  @b.Surname </label>
+                          </div>
+                      </div>
+                
+                   }*@
+            
+            </div>
 
             
 
+            </div>
+        
+
+
+            <div id="M-M-Messages">
+
+
+
+            </div>
+
+            <div id="M-M-Notifications">
+
+            </div>
 
 
 
 
 
 
-
-         </div>
-
+        </div>
 
 
 
 
 
+    <script src="~/js/Main.js" type="text/javascript"> </script>
+
+    
+  
 
 
 
-
-
-     </div>
-
-
-
-
-
-
-
- </body>
+</body>
 
 
 
