@@ -48,20 +48,16 @@ namespace FakeFacebook.Controllers
         }
 
 
-       // GET: Home
+       // GET: Home/Index
         
         public IActionResult Index()
         {
-
-
-
-          
 
             return View();
 
         }
 
-        //POST Index/Login
+        //POST Home/Index/Login
         [HttpPost]
         [ValidateAntiForgeryToken]
        public ActionResult Index(LoginAccount login)
@@ -121,28 +117,13 @@ namespace FakeFacebook.Controllers
 
 
                     friends.Add(FriendModel.FirstOrDefault());
-                    
-                    
+
 
                     ViewBag.Friends = friends;
 
                     
 
                 }
-
-
-
-
-
-
-             
-
-
-
-
-
-
-
 
                 return View("Main");
               
@@ -164,7 +145,7 @@ namespace FakeFacebook.Controllers
 
         }
 
-        //POST : Index/Create
+        //POST : Home/Index/Create
         [HttpPost]
         public ActionResult Create(CreateAccountDto create)
         {
@@ -223,10 +204,11 @@ namespace FakeFacebook.Controllers
 
         }
 
-       
-        //POST : Index/Main
+
+
+        //POST : Home/Main/Search
         [HttpPost]
-        public async Task <IActionResult> Search(string searchString)
+        public async Task<IActionResult> Search(string searchString)
         {
 
             if (!string.IsNullOrEmpty(searchString))
@@ -242,9 +224,9 @@ namespace FakeFacebook.Controllers
 
                     list.Add(item);
 
-                    ViewBag.FriendList =  list;
+                    ViewBag.FriendList = list;
 
-                  
+
 
                 }
             }
@@ -256,11 +238,10 @@ namespace FakeFacebook.Controllers
             }
 
 
-            return View("Main");
+            return NoContent();
 
 
         }
-       
 
 
 
@@ -270,6 +251,6 @@ namespace FakeFacebook.Controllers
 
 
 
-       
+
     }
 }

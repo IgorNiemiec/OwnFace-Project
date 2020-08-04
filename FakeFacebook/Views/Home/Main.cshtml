@@ -1,7 +1,7 @@
 ﻿@page
 
 @using FakeFacebook.Models;
-@model FakeFacebook.Controllers.HomeController
+@model IEnumerable<Account>
   
 @{
 }
@@ -52,7 +52,7 @@
                 <div id="M-M-HomeButton">
 
 
-                    <i class="demo-icon icon-bell"></i>
+                    <i class="demo-icon icon-bell"> </i>
 
 
                 </div>
@@ -137,27 +137,32 @@
 
             @using (Html.BeginForm("Search", "Home", FormMethod.Post))
             {
-                <div id="M-M-LabelSearch"> Znajdź swoich znajomych </div>
+            <div id="M-M-LabelSearch"> Znajdź swoich znajomych  </div>
                 <input type="text" id="SearchFriends" name="searchString" />
                 <input  type="submit" id="M-M-SearchButton" value="?">
 
             }
         <div id="M-M-AllFriends">
 
+
             
-                   @*@foreach (Account b in ViewBag.FriendList)
-                   {
-                
-                      <div class="AllFriends">
-                          <div id="LocationLabel">
-                              <label class="firstNameLabel"> @b.Name </label>
-                              <label class="SurnameLabel">  @b.Surname </label>
-                          </div>
-                      </div>
-                
-                   }*@
-            
-            </div>
+                @*@foreach (Account b in ViewBag.FriendList)
+                {
+
+                    <div class="AllFriends">
+                        <div id="LocationLabel">
+                            <label class="firstNameLabel"> @b.Name </label>
+                            <label class="SurnameLabel">  @b.Surname </label>
+                        </div>
+                    </div>
+
+                }*@
+
+
+          
+
+
+        </div>
 
             
 
